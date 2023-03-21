@@ -5,9 +5,9 @@ const names = ["Guadalupe", "Ollie", "Aki"]
 function writeCards(names, event) {
     for (let i = 0; i < names.length; i++) {
            var str = `"Thank you, ${names[i]}, for the wonderful ${event} gift!"`
-           var newArray = [newArray, ...str];
+           var newArray = [newArray, str.slice()];
     }
-    return newArray
+    return newArray;
 }
 console.log(writeCards(names, "surprise"));
 
